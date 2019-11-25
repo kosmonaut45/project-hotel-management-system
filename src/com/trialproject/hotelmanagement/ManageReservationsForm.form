@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.trialproject.hotelmanagement.ManageReservationsForm">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="959" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="84ae3" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="913da" binding="panelReservationFormBackground" layout-manager="GridLayoutManager" row-count="10" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-11993089"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="983f8" binding="panelReservationTextBackground" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="8" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="-1" height="50"/>
+                    <preferred-size width="-1" height="50"/>
+                    <maximum-size width="-1" height="50"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-36024"/>
+                  <enabled value="true"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="f106d" class="javax.swing.JLabel" binding="labelMangeClients">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="28"/>
+                      <horizontalAlignment value="0"/>
+                      <text value="Rezervacijos"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <component id="3bd79" class="javax.swing.JLabel" binding="labelReservationID">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="11"/>
+                  <text value="ID:"/>
+                </properties>
+              </component>
+              <component id="3c5b" class="javax.swing.JTextField" binding="textFieldReservationID">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                </properties>
+              </component>
+              <component id="7948d" class="javax.swing.JLabel" binding="labelClientID">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="11"/>
+                  <text value="Kliento ID*:"/>
+                </properties>
+              </component>
+              <component id="e5980" class="javax.swing.JTextField" binding="textFieldClientID">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="d5bb8" class="javax.swing.JLabel" binding="labelRoomNumber">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="11"/>
+                  <text value="Kambario numeris*:"/>
+                </properties>
+              </component>
+              <component id="72fc7" class="javax.swing.JTextField" binding="textFieldRoomNumber">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="6811e" class="javax.swing.JLabel" binding="labelReservationBeginning">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="11"/>
+                  <text value="Rezervacijos pradžia*:"/>
+                </properties>
+              </component>
+              <component id="7c608" class="javax.swing.JLabel" binding="labelReservationEnd">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="11"/>
+                  <text value="Rezervacijos pabaiga:*"/>
+                </properties>
+              </component>
+              <component id="2fac" class="javax.swing.JTable" binding="tableReservations">
+                <constraints>
+                  <grid row="1" column="6" row-span="7" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="550" height="-1"/>
+                    <preferred-size width="550" height="50"/>
+                    <maximum-size width="550" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <autoCreateRowSorter value="false"/>
+                  <background color="-1841432"/>
+                  <foreground color="-16777216"/>
+                  <gridColor color="-6710114"/>
+                </properties>
+              </component>
+              <component id="240dc" class="javax.swing.JButton" binding="buttonAdd">
+                <constraints>
+                  <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Pridėti"/>
+                  <verticalAlignment value="0"/>
+                </properties>
+              </component>
+              <component id="7cb01" class="javax.swing.JButton" binding="buttonRemove">
+                <constraints>
+                  <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Pašalinti"/>
+                  <verticalAlignment value="0"/>
+                </properties>
+              </component>
+              <vspacer id="f6203">
+                <constraints>
+                  <grid row="9" column="6" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                    <minimum-size width="-1" height="50"/>
+                    <preferred-size width="-1" height="50"/>
+                  </grid>
+                </constraints>
+              </vspacer>
+              <hspacer id="b2be2">
+                <constraints>
+                  <grid row="3" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="20" height="-1"/>
+                    <preferred-size width="20" height="-1"/>
+                    <maximum-size width="20" height="-1"/>
+                  </grid>
+                </constraints>
+              </hspacer>
+              <vspacer id="66d91">
+                <constraints>
+                  <grid row="6" column="3" row-span="2" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="a7e2c" class="javax.swing.JButton" binding="buttonEdit">
+                <constraints>
+                  <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Redaguoti"/>
+                  <verticalAlignment value="0"/>
+                </properties>
+              </component>
+              <component id="24588" class="javax.swing.JButton" binding="buttonClearFields">
+                <constraints>
+                  <grid row="7" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Išvalyti"/>
+                  <verticalAlignment value="0"/>
+                </properties>
+              </component>
+              <component id="6d23a" class="javax.swing.JButton" binding="buttonRefresh">
+                <constraints>
+                  <grid row="8" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false">
+                    <maximum-size width="100" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value="Atnaujinti"/>
+                </properties>
+              </component>
+              <grid id="af689" binding="panelDateIn" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="5" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <grid id="a8b69" binding="panelDateOut" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="5" column="1" row-span="1" col-span="5" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children/>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
