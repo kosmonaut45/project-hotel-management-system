@@ -37,6 +37,7 @@ public class ManageReservationsForm extends JFrame {
     private JPanel panelDateOut;
     private JPanel panelReservationTextBackground;
     private JPanel panelReservationFormBackground;
+    private JLabel labelCompulsaryFields;
     private String[] columns = {"Rezervacijos nr.", "Kliento nr.", "Kambario nr.", "Pradžios data", "Pabaigos data"};
 
     private JDateChooser dateIn = new JDateChooser();
@@ -138,9 +139,11 @@ public class ManageReservationsForm extends JFrame {
                 }
 
             } catch(NumberFormatException ex){
-                JOptionPane.showMessageDialog(rootPane, "Pasirinkite rezervaciją", "Klaida", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane, "Įveskite rezervacijos duomenis", "Klaida", JOptionPane.WARNING_MESSAGE);
             } catch(ParseException ex) {
                 Logger.getLogger(ManageReservationsForm.class.getName()).log(Level.SEVERE, null, ex);
+            } catch(NullPointerException ex){
+                JOptionPane.showMessageDialog(rootPane, "Pasirinkite rezervacijos datą", "Klaida", JOptionPane.WARNING_MESSAGE);
             }
         }
     }
@@ -164,10 +167,10 @@ public class ManageReservationsForm extends JFrame {
                 Date today = dateFormat.parse(todayDate);
 
                 if(!(start.after(today) || start.equals(today))){
-                    JOptionPane.showMessageDialog(rootPane, "Pasirinkite šiandienos arba būsimą rezervacijos pradžios datą", "Klaida", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(rootPane, "Pasirinkite šiandienos arba būsimą rezervacijos pradžios datą", "Klaida", JOptionPane.WARNING_MESSAGE);
                 }
                 else if(!(finish.after(start) || finish.equals(start))){
-                    JOptionPane.showMessageDialog(rootPane, "Pasirinkite būsimą rezervacijos pabaigos datą", "Klaida", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(rootPane, "Pasirinkite būsimą rezervacijos pabaigos datą", "Klaida", JOptionPane.WARNING_MESSAGE);
                 }
                 else{
                     if(reservation.editReservation(reservationId, clientId, roomNumber, startDate, finishDate)){
@@ -175,16 +178,14 @@ public class ManageReservationsForm extends JFrame {
                         JOptionPane.showMessageDialog(rootPane, "Rezervacijos duomenys atnaujinti sėkmingai", "Redaguoti rezervaciją", JOptionPane.INFORMATION_MESSAGE);
                     }
                     else{
-                        JOptionPane.showMessageDialog(rootPane, "ezervacijos atnaujinti nepavyko", "Klaida", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(rootPane, "Rezervacijos atnaujinti nepavyko", "Klaida", JOptionPane.ERROR_MESSAGE);
                     }
                 }
-            }
-            catch(NumberFormatException ex){
-                JOptionPane.showMessageDialog(rootPane, "Pasirinkite rezervaciją, kurią norite atnaujinti", "Klaida", JOptionPane.ERROR_MESSAGE);
-            }
-            catch(NullPointerException ex){
-                JOptionPane.showMessageDialog(rootPane, "Pasirinkite rezervacijos datą", "Klaida", JOptionPane.ERROR_MESSAGE);
-            }catch(ParseException ex) {
+            } catch(NumberFormatException ex){
+                JOptionPane.showMessageDialog(rootPane, "Pasirinkite rezervaciją, kurią norite atnaujinti", "Klaida", JOptionPane.WARNING_MESSAGE);
+            } catch(NullPointerException ex){
+                JOptionPane.showMessageDialog(rootPane, "Pasirinkite rezervacijos datą", "Klaida", JOptionPane.WARNING_MESSAGE);
+            } catch(ParseException ex) {
                 Logger.getLogger(ManageReservationsForm.class.getName()).log(Level.SEVERE, null, ex);
             }
 

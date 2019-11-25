@@ -27,6 +27,7 @@ public class ManageRoomsForm extends JFrame {
     private JLabel labelReserved;
     private JRadioButton radioButtonYes;
     private JRadioButton radioButtonNo;
+    private JLabel labelCompulsaryFields;
     private String[] columns = {"Kambario numberis", "Tipas", "Telefono numeris", "Rezervuotas"};
 
     private Room room = new Room();
@@ -114,7 +115,7 @@ public class ManageRoomsForm extends JFrame {
                 }
 
             } catch(NumberFormatException ex){
-                JOptionPane.showMessageDialog(rootPane, ex.getMessage() + "Pasirinkite kambario numerį", "Klaida", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane, "Pasirinkite kambario numerį", "Klaida", JOptionPane.WARNING_MESSAGE);
             }
         }
     }
@@ -153,7 +154,7 @@ public class ManageRoomsForm extends JFrame {
                     }
                 }
                 catch(NumberFormatException ex){
-                    JOptionPane.showMessageDialog(rootPane, "Pasirinkite kambarį, kurio informaciją norite atnaujinti", "Klaida", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(rootPane, "Pasirinkite kambarį, kurio informaciją norite atnaujinti", "Klaida", JOptionPane.WARNING_MESSAGE);
                 }
             }
 
@@ -177,7 +178,7 @@ public class ManageRoomsForm extends JFrame {
                 }
             }
             catch(NumberFormatException ex){
-                JOptionPane.showMessageDialog(rootPane, ex.getMessage() + "Pasirinkite kambarį, kurį norite pašalinti", "Klaida", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane, "Pasirinkite kambarį, kurį norite pašalinti", "Klaida", JOptionPane.WARNING_MESSAGE);
             }
         }
     }

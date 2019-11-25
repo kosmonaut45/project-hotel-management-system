@@ -26,6 +26,7 @@ public class ManageClientsForm extends JFrame {
     private JButton buttonRefresh;
     private JPanel panelClientTextBackground;
     private JPanel panelBackground;
+    private JLabel labelCompulsaryFields;
     private String[] columns = {"ID", "Vardas", "Pavardė", "El. paštas", "Tel. nr."};
 
     private Client client = new Client();
@@ -107,7 +108,7 @@ public class ManageClientsForm extends JFrame {
             String phone = textFieldPhoneNumber.getText();
 
             if(fname.trim().equals("") || lname.trim().equals("") || phone.trim().equals("")){
-                JOptionPane.showMessageDialog(rootPane, "Privalomi laukeliai", "Redaguoti kliento duomenis", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane, "Pasirinkite klientą", "Redaguoti kliento duomenis", JOptionPane.WARNING_MESSAGE);
             } else {
 
                 try{

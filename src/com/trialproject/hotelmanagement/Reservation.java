@@ -16,16 +16,7 @@ class Reservation extends JFrame {
     private MY_CONNECTION my_connection = new MY_CONNECTION();
     private Room room = new Room();
 
-    Reservation() throws HeadlessException {
-        //2 Foreign keys
-        //ALTER TABLE reservations ADD CONSTRAINT fk_client_id FOREIGN KEY (client_id) REFERENCES clients(id) on DELETE CASCADE
-        //ALTER TABLE reservations ADD CONSTRAINT fk_room_number FOREIGN KEY (room_number) REFERENCES rooms(room_number) on DELETE CASCADE
-
-        //one more foreign key
-        //ALTER TABLE rooms ADD CONSTRAINT fk_types_type FOREIGN KEY (room_type) REFERENCES types(type) on DELETE CASCADE
-
-
-
+    Reservation() {
     }
 
     boolean addReservation(int client_id, int roomNumber, String dateIn, String dateOut){
